@@ -1,21 +1,68 @@
 <!DOCTYPE html>
+
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>{% block title %}{% endblock title %}Site Name</title>
+  <head>
+    <meta charset="utf-8">
+      <title>{% block title %}{% endblock title %}Site Name</title>
 
-        <meta http-equiv="X-UA-Compatible" content="chrome=IE7" />
+      <meta http-equiv="X-UA-Compatible" content="chrome=IE7" />
+      <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+      <meta name="apple-mobile-web-app-capable" content="yes"/>
+      <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-        <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
-        <meta name="apple-mobile-web-app-capable" content="yes"/>
-        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+      <link rel="stylesheet" href="{{STATIC_URL}}css/screen.css" media="screen, projection"/>
+      <link rel="stylesheet"  href="{{STATIC_URL}}css/bootstrap.css"/>
+      <link rel="stylesheet"  href="{{STATIC_URL}}css/justified-nav.css"/>
 
-        <link rel="stylesheet" href="{{STATIC_URL}}css/screen.css" media="screen, projection"/>
-
-        {% block extra_head %}{% endblock extra_head %}
-
+     {% block extra_head %}{% endblock extra_head %}
     </head>
     <body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">
-        {% block content %}{% endblock content %}
+
+
+
+              <div class="container">
+
+      <div class="masthead">
+        <h3 class="text-muted">Project name</h3>
+        <ul class="nav nav-justified">
+
+
+        </ul>
+      </div>
+ </div>
+
+
+
+<div class="container">
+  <div class="blog-header">
+    <h1 class="blog-title">The Bootstrap Blog</h1>
+    <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-9 blog-main">
+      {% block content %}
+       <!-- text -->
+
+       {% endblock content %}
+    </div><!-- /.blog-main -->
+
+          <!-- sidebar -->
+          <!-- /sidebar -->
+
+  </div><!-- /.row -->
+
+
+
+</div>
+
+
+<div class="container">
+        <!-- Site footer -->
+      <div class="footer">
+        <p></p>
+      </div>
+</div>
+
     </body>
 </html>

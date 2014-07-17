@@ -41,8 +41,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'django.contrib.sites',
     'south',
+    'django_coverage',
 
     'apps.hello',
 )
@@ -128,3 +129,4 @@ TEMPLATE_DIRS = (
 
 # Turn off south during test
 SOUTH_TESTS_MIGRATE = False
+COVERAGE_REPORT_HTML_OUTPUT_DIR ='/home/andy/PycharmProjects/ttt/cover'

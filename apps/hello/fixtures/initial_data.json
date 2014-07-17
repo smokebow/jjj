@@ -1,0 +1,12 @@
+[
+  {
+    "model": "hello.info",
+    "pk": 1,
+    "fields": {
+    "name": "Andrey",
+    "surname": "Panchenko",
+    "bio": "I am from Ukraine...",
+    "mail": "andy.punch@yandex.ru"
+    }
+  }
+  ]
